@@ -1,3 +1,3 @@
 # PokéZon
 
-All Your Pokémon Needs In One Place!
+Gotta Buy 'Em All!
