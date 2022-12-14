@@ -1,3 +1,3 @@
-# MERN-Stack Infrastructure
+# PokéZon
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+All Your Pokémon Needs In One Place!
