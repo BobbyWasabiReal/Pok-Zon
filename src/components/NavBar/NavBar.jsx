@@ -13,9 +13,15 @@ export default function NavBar({ user, setUser }) {
                 <nav>
                     <Link to="/">PokéZon</Link>
                     <span className='right'>
+                        <div className='link'>
                         <Link to="/orders/new">Shop</Link>
+                        </div>
+                        <div className='link'>
                         <Link to="/orders">My Backpack</Link>
+                        </div>
+                        <div className='link'>
                         <Link to="" onClick={handleLogOut}>Log out</Link>
+                        </div>
                     </span>
                 </nav>
                 :

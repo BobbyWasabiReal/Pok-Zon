@@ -87,3 +87,14 @@ a {
 a:hover {
   transform: scale(1.2);
 }
+
+.link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  transition: 200ms;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
