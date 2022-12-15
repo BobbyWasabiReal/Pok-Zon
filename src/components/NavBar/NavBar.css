@@ -6,3 +6,11 @@ nav {
     padding: 2rem;
     background-color: black;
 }
+
+img {
+    width: 8vmin;
+    height: 8vmin;
+    margin-top: -3vmin;
+    margin-bottom: -3vmin;
+    margin-right: 2vmin;
+}

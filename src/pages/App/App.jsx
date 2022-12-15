@@ -18,16 +18,16 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path="/orders/new" element={<ShopPage />} />
-            <Route path="/orders" element={<BackpackPage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/backpack" element={<BackpackPage />} />
           </Routes>
         </>
         :
         <>
           <NavBar setUser={setUser} />
           <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<AuthPage setUser={setUser}/>} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<AuthPage setUser={setUser} />} />
           </Routes>
         </>
       }
