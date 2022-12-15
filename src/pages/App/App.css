@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #191919;
+}
+
+* {
+  color: white;
+  text-decoration: none;
+}
+
+.form-container {
+  background-color: #1f1f1f;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  transition: 200ms;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+input {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+button:disabled, form:invalid button[type="submit"] {
+  cursor: not-allowed;
+  background-color: rgba(50, 50, 50, 0.892);
+  color: rgb(109, 109, 109);
+  border: 1px solid rgb(109, 109, 109);
+}
+
+a {
+  margin-right: 2vmin;
+  margin-left: 2vmin;
+  transition: 200ms;
+}
+
+a:hover {
+  transform: scale(1.2);
+}
