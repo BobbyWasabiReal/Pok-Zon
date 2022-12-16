@@ -30,9 +30,6 @@ export default function ShopPage() {
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
         />
-        <Link to="/backpack" className="button btn-sm">
-          My Backpack
-        </Link>
         {/* <UserLogOut user={user} setUser={setUser} /> */}
       </aside>
       {/* <ItemList
