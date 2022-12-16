@@ -27,13 +27,12 @@ li {
 .CategoryList li:hover:not(.active) {
   cursor: pointer;
   background-color: black;
-  color: var(--white);
+  color: white;
 }
 
 .CategoryList li.active {
-  color: var(--text-dark);
-  background-color: var(--tan-1);
-  border: 0.1vmin solid var(--tan-3);
+  color: black;
+  background-color: white;
 }
 
 .CategoryListPage {

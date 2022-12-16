@@ -5,7 +5,7 @@ export default function CategoryList({
   activeCategory,
   setActiveCategory,
 }) {
-  const cats = categories.map((category) => (
+  const cats = categories.map(category => 
     <li
       key={category}
       className={category === activeCategory ? "active" : ""}
@@ -13,7 +13,7 @@ export default function CategoryList({
     >
       {category}
     </li>
-  ));
+  );
   return (
     <div className="CategoryListPage">
       <h1

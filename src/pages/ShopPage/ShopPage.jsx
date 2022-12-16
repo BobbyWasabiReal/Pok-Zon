@@ -13,7 +13,7 @@ export default function ShopPage() {
   useEffect(() => {
     async function getItems() {
       const items = await itemsAPI.getAll();
-      categories.current = [...new Set(items.map((item) => item.category))];
+      categories.current = [...new Set(items.map(item => item.category))];
       setItems(items);
       setActiveCategory(categories.current[0]);
     }
@@ -27,8 +27,8 @@ export default function ShopPage() {
         {/* <Logo /> */}
         <CategoryList
           categories={categories.current}
-          activeCat={activeCategory}
-          setActiveCat={setActiveCategory}
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
         />
         <Link to="/backpack" className="button btn-sm">
           My Backpack
