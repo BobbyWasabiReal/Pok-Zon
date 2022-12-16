@@ -35,3 +35,7 @@
   text-align: center;
   color: white;
 }
+
+button.btn-sm {
+    width: 10vmin;
+}

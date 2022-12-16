@@ -14,7 +14,7 @@ export default function ItemListItem({ item, handleAddToOrder }) {
       <div className="price">
         <span>₽{item.price}</span>
         <button
-          className="btn-sm"
+          className="btn-sm right"
           onClick={() => handleAddToOrder(item._id)}
         >
           ADD
