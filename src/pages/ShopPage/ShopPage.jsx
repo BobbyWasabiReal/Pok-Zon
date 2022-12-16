@@ -4,6 +4,7 @@ import * as itemsAPI from "../../utilities/items-api";
 import * as ordersAPI from "../../utilities/orders-api";
 import CategoryList from "../../components/CategoryList/CategoryList";
 import ItemList from "../../components/ItemList/ItemList";
+import Cart from "../../components/Cart/Cart";
 import './ShopPage.css'
 
 export default function ShopPage() {
@@ -58,9 +59,11 @@ export default function ShopPage() {
         items={items.filter(item => item.category === activeCategory)}
         handleAddToOrder={handleAddToOrder}
       />
-      {/* <OrderDetail
+      <Cart
         order={cart}
-      /> */}
+        handleChangeQuantity={handleChangeQuantity}
+        handleCheckout={handleCheckout}
+      />
     </main>
   );
 }
