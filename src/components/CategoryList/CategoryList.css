@@ -1,0 +1,42 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  width: 30vmin;
+}
+
+li {
+  background-color: #333;
+  margin: 1vmin;
+}
+
+.CategoryList {
+  color: var(--text-light);
+  list-style: none;
+  padding: 0;
+  font-size: 1.7vw;
+}
+
+.CategoryList li {
+  padding: 0.6vmin;
+  text-align: center;
+  border-radius: 0.5vmin;
+  margin-bottom: 0.5vmin;
+}
+
+.CategoryList li:hover:not(.active) {
+  cursor: pointer;
+  background-color: black;
+  color: var(--white);
+}
+
+.CategoryList li.active {
+  color: var(--text-dark);
+  background-color: var(--tan-1);
+  border: 0.1vmin solid var(--tan-3);
+}
+
+.CategoryListPage {
+  background-color: rgb(34, 34, 34);
+  padding: 1vmin;
+}

@@ -12,7 +12,9 @@ export default function NavBar({ user, setUser }) {
         <>
             {user ?
                 <nav>
-                    <Link to="/"><img src={logo} />PokéZon</Link>
+                    <Link to="/"
+                    style={{fontSize: "4vmin"}}
+                    ><img src={logo} alt="logo" />PokéZon</Link>
                     <span className='right'>
                         <div className='link'>
                             <Link to="/shop">Shop</Link>
@@ -27,7 +29,9 @@ export default function NavBar({ user, setUser }) {
                 </nav>
                 :
                 <nav>
-                    <Link to="/"><img src={logo} />PokéZon</Link>
+                    <Link to="/"
+                    style={{fontSize: "3.5vmin"}}
+                    ><img src={logo} alt="logo"  />PokéZon</Link>
                     <Link to="/login">Log In</Link>
                 </nav>
 

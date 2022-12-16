@@ -1,5 +1,6 @@
 nav {
     margin: -2vmin;
+    height: 11vmin;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,5 +13,5 @@ img {
     height: 8vmin;
     margin-top: -3vmin;
     margin-bottom: -3vmin;
-    margin-right: 2vmin;
+    margin-right: 1vmin;
 }
