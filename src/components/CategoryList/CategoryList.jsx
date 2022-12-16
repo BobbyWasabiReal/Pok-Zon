@@ -17,7 +17,7 @@ export default function CategoryList({
   return (
     <div className="CategoryListPage">
       <h1
-      style={{textAlign: "left"}}
+      style={{textAlign: "center"}}
       >Categories</h1>
       <ul className="CategoryList">{cats}</ul>
     </div>

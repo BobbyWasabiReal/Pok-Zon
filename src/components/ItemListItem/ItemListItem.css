@@ -1,0 +1,37 @@
+.ItemListItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vmin;
+  padding: 2vmin;
+  color: white;
+  background-color: rgb(46, 46, 46);
+  border-radius: 1vmin;
+  font-size: 4vmin;
+}
+
+.ItemListItem .image {
+  height: 8vw;
+  width: 8vw;
+  font-size: 4vw;
+  border-radius: 1vmin;
+  background-color: rgb(64, 64, 64);
+}
+
+.ItemListItem .price {
+  display: flex;
+  flex-direction: column;
+}
+
+.ItemListItem .price span {
+  font-size: 1.7vw;
+  text-align: center;
+  color: white;
+}
+
+.ItemListItem .name {
+  font-size: 2vw;
+  text-align: center;
+  color: white;
+}
