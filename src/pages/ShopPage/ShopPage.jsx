@@ -48,7 +48,6 @@ export default function ShopPage() {
   return (
     <main className="ShopPage">
       <aside>
-        {/* <Logo /> */}
         <CategoryList
           categories={categories.current}
           activeCategory={activeCategory}

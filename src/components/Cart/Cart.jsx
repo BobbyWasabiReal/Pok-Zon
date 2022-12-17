@@ -4,9 +4,9 @@ import CartItem from "../CartItem/CartItem";
 export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
   if (!order) return null;
 
-  const cartItems = order.items.map((item) => (
+  const cartItems = order.cartItems.map((item) => (
     <CartItem
-      item={item}
+      cartItem={item}
       isPaid={order.isPaid}
       handleChangeQuantity={handleChangeQuantity}
       key={item._id}

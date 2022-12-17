@@ -1,6 +1,5 @@
 const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
-const { default: userEvent } = require('@testing-library/user-event');
 const bcrypt = require('bcrypt');
 
 module.exports = {

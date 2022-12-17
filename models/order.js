@@ -1,18 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const itemSchema = require("./item");
 
-const CartItemSchema = new Schema(
+const cartItemSchema = new Schema(
   {
     quantity: { type: Number, default: 1 },
-    item: itemSchema,
+    item: { type: Schema.Types.ObjectId, ref: "Item"}
   },
   {
     toJSON: { virtuals: true },
   }
 );
 
-CartItemSchema.virtual("extPrice").get(function () {
+cartItemSchema.virtual("extPrice").get(function () {
   return this.quantity * this.item.price;
 });
 
@@ -20,7 +19,7 @@ const OrderSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: "User" },
     IsPaid: { type: Boolean, default: false },
-    cartItems: [CartItemSchema],
+    cartItems: [cartItemSchema],
   },
   {
     toJSON: { virtuals: true },
@@ -43,9 +42,9 @@ OrderSchema.statics.getCart = function (userId) {
   );
 };
 
-orderSchema.methods.addToCart = async function (itemId) {
+OrderSchema.methods.addToCart = async function (itemId) {
   const cart = this;
-  const cartItem = cart.cartItems.find((item) =>
+  const cartItem = cart.cartItems.find(cartItem =>
     cartItem.item._id.equals(itemId)
   );
   if (cartItem) {
@@ -58,9 +57,9 @@ orderSchema.methods.addToCart = async function (itemId) {
   return cart.save();
 };
 
-orderSchema.methods.changeQuantity = function (itemId, quantity) {
+OrderSchema.methods.changeQuantity = function (itemId, quantity) {
   const cart = this;
-  const cartItem = cart.cartItems.find((item) =>
+  const cartItem = cart.cartItems.find(cartItem =>
     cartItem.item._id.equals(itemId)
   );
   if (cartItem && quantity <= 0) {

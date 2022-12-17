@@ -1,15 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const ensureLoggedIn = require('../config/ensureLoggedIn');
-const ordersCtrl = require('../controllers/api/orders');
+const ordersCtrl = require('../../controllers/api/orders');
 
 // GET /api/orders/cart
-router.get('/cart', ensureLoggedIn, ordersCtrl.cart);
+router.get('/cart', ordersCtrl.cart);
 // POST /api/orders/cart/items/:id
-router.post('/cart/items/:id', ensureLoggedIn, ordersCtrl.addItemToCart);
+router.post('/cart/items/:id', ordersCtrl.addItemToCart);
+// POST /api/order/cart/qty
+router.post('/cart/qty', ordersCtrl.setItemQuantity);
 // POST /api/orders/cart/checkout
-router.post('/cart/checkout', ensureLoggedIn, ordersCtrl.checkout);
-// POST /api/order/cart/quanity
-router.post('/cart/quantity', ensureLoggedIn, ordersCtrl.setItemQuantity);
+router.post('/cart/checkout', ordersCtrl.checkout);
 
 module.exports = router;

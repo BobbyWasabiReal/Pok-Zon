@@ -1,7 +1,8 @@
-export default function CartItem() {
+export default function CartItem({ cartItem, isPaid, handleChangeQuantity}) {
     return (
         <div className="CartItem">
-            <h1>HI</h1>
+            <div className="flex-ctr-ctr">{cartItem.item.image}</div>
+            <div className="item-name">{cartItem.item.name}</div>
         </div>
     );
 }
