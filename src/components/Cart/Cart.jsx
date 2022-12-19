@@ -29,7 +29,7 @@ export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
                 >CHECKOUT</button>
               }
               <span>{order.totalQty}</span>
-              <span className="right">${order.orderTotal.toFixed(2)}</span>
+              <span className="right">${order.orderTotal}</span>
             </section>
           </>
           :
