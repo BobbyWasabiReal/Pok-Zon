@@ -4,7 +4,7 @@ import CartItem from "../CartItem/CartItem";
 export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
   if (!order) return null;
 
-  const cartItems = order.cartItems.map((item) => (
+  const cartItems = order.cartItems.map(item => (
     <CartItem
       cartItem={item}
       isPaid={order.isPaid}
@@ -14,13 +14,6 @@ export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
   ));
   return (
     <div className="Cart">
-      <div className="section-heading">
-        {order.isPaid ?
-          <span>ORDER <span className="smaller">{order.orderId}</span></span>
-          :
-          <span>NEW ORDER</span>
-        }
-      </div>
       <div className="line-item-container flex-ctr-ctr flex-col scroll-y">
         {cartItems.length ?
           <>
@@ -40,7 +33,7 @@ export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
             </section>
           </>
           :
-          <div className="hungry">Hungry?</div>
+          <div className="hungry">How Can We Help?</div>
         }
       </div>
     </div>
