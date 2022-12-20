@@ -10,6 +10,11 @@ import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [updateTrigger, setUpdateTrigger] = useState(false);
+
+  function handleRefreshChange() {
+    setUpdateTrigger(!updateTrigger);
+  }
 
   return (
     <main className="App">
@@ -18,7 +23,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/shop" element={<ShopPage handleRefreshChange={handleRefreshChange} />} />
             <Route path="/backpack" element={<BackpackPage />} />
           </Routes>
         </>

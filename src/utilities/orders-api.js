@@ -10,8 +10,8 @@ export function addToCart(itemId) {
   return sendRequest(`${BASE_URL}/cart/items/${itemId}`, "POST");
 }
 
-export function changeQuantity(itemId, quantity) {
-  return sendRequest(`${BASE_URL}/cart/qty`, "PUT", { itemId, quantity });
+export function changeQuantity(itemId, qty) {
+  return sendRequest(`${BASE_URL}/cart/qty`, "PUT", { itemId, qty });
 }
 
 export function checkout() {

@@ -29,7 +29,7 @@ OrderSchema.virtual("orderTotal").get(function () {
 });
 
 OrderSchema.virtual("orderQty").get(function () {
-  return this.cartItems.reduce((total, item) => total + item.quantity, 0);
+  return this.cartItems.reduce((total, item) => total + item.qty, 0);
 });
 
 OrderSchema.virtual('orderId').get(function() {
@@ -59,15 +59,15 @@ OrderSchema.methods.addToCart = async function (itemId) {
   return cart.save();
 };
 
-OrderSchema.methods.changeQuantity = function (itemId, newQuantity) {
+OrderSchema.methods.changeQuantity = function (itemId, newQty) {
   const cart = this;
   const cartItem = cart.cartItems.find(cartItem =>
     cartItem.item._id.equals(itemId)
   );
-  if (cartItem && newQuantity <= 0) {
+  if (cartItem && newQty <= 0) {
     cartItem.remove();
   } else if (cartItem) {
-    cartItem.quantity = newQuantity;
+    cartItem.quantity = newQty;
   }
   return cart.save();
 };

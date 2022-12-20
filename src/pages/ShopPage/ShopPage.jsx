@@ -7,7 +7,7 @@ import ItemList from "../../components/ItemList/ItemList";
 import Cart from "../../components/Cart/Cart";
 import './ShopPage.css'
 
-export default function ShopPage() {
+export default function ShopPage({ handleRefreshChange }) {
   const [items, setItems] = useState([]);
   const [activeCategory, setActiveCategory] = useState("");
   const [cart, setCart] = useState(null);
@@ -28,15 +28,17 @@ export default function ShopPage() {
       setCart(cart);
     }
     getCart();
-  }, []);
+  }, [handleRefreshChange]);
 
   async function handleAddToOrder(itemId) {
     const updatedCart = await ordersAPI.addToCart(itemId);
+    handleRefreshChange();
     setCart(updatedCart);
   }
-console.log(cart)
-  async function handleChangeQuantity(itemId, quantity) {
-    const updatedCart = await ordersAPI.changeQuantity(itemId, quantity);
+
+  async function handleChangeQuantity(itemId, qty) {
+    const updatedCart = await ordersAPI.changeQuantity(itemId, qty);
+    handleRefreshChange();
     setCart(updatedCart);
   }
 
