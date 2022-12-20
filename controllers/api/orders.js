@@ -16,7 +16,7 @@ async function getAllForUser(req, res) {
 }
 
 async function cart(req, res) {
-  const cart = await Order.getCart(req.user._id);
+  const cart = await Order.getCart(req.user._id).populate("cartItems.item").exec();
   res.json(cart);
 }
 

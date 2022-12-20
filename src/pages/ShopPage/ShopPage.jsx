@@ -34,7 +34,7 @@ export default function ShopPage() {
     const updatedCart = await ordersAPI.addToCart(itemId);
     setCart(updatedCart);
   }
-
+console.log(cart)
   async function handleChangeQuantity(itemId, quantity) {
     const updatedCart = await ordersAPI.changeQuantity(itemId, quantity);
     setCart(updatedCart);

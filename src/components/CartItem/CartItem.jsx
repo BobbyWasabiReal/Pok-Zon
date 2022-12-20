@@ -13,7 +13,7 @@ export default function CartItem({ cartItem, isPaid, handleChangeQuantity }) {
       <div className="item-name">
         {cartItem.item.name}
         <span style={{ marginLeft: "2vmin" }}>
-          {cartItem.item.price}
+        ₽{cartItem.item.price}
         </span>
       </div>
       <div className="qty" style={{ justifyContent: isPaid && "center" }}>
@@ -39,7 +39,7 @@ export default function CartItem({ cartItem, isPaid, handleChangeQuantity }) {
           </button>
         )}
       </div>
-      <div className="ext-price">${cartItem.extPrice}</div>
+      <div className="ext-price">₽{cartItem.extPrice}</div>
     </div>
   );
 }
