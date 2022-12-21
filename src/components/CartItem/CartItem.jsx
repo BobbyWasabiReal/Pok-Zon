@@ -7,17 +7,15 @@ export default function CartItem({ cartItem, IsPaid, handleChangeQuantity }) {
         <img
           src={cartItem.item.image}
           alt="item"
-          style={{ width: "12vmin", height: "12vmin", marginBottom: "-6vmin" }}
+          style={{ width: "12vmin", height: "12vmin", marginBottom: "-4vmin" }}
         />
       </div>
-      <div className="item-name">
+      <div className="item">
         {cartItem.item.name}
-        <span style={{ marginLeft: "2vmin" }}>
-        ₽{cartItem.item.price}
-        </span>
+        <span style={{ marginLeft: "2vmin", marginRight: "2vmin" }}> ₽{cartItem.item.price}</span>
       </div>
       <div className="qty" style={{ justifyContent: IsPaid && "center" }}>
-        {!IsPaid && 
+        {!IsPaid && (
           <button
             className="btn-xs"
             onClick={() =>
@@ -26,9 +24,9 @@ export default function CartItem({ cartItem, IsPaid, handleChangeQuantity }) {
           >
             −
           </button>
-        }
+        )}
         <span>{cartItem.quantity}</span>
-        {!IsPaid && 
+        {!IsPaid && (
           <button
             className="btn-xs"
             onClick={() =>
@@ -37,9 +35,12 @@ export default function CartItem({ cartItem, IsPaid, handleChangeQuantity }) {
           >
             +
           </button>
-        }
+        )}
       </div>
-      <div className="ext-price">₽{cartItem.extPrice}</div>
+      <div 
+      className="ext-price"
+      style={{ marginLeft: "2vmin" }}
+      >₽{cartItem.extPrice}</div>
     </div>
   );
 }

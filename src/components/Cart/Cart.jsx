@@ -14,7 +14,7 @@ export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
   );
 
   return (
-    <div className="OrderDetail">
+    <div className="Cart">
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       <div className="line-item-container flex-ctr-ctr flex-col scroll-y">
         {cartItems.length ?
@@ -31,7 +31,7 @@ export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
                 >CHECKOUT</button>
               }
               <span>{order.totalQty}</span>
-              <span className="right">₽{order.orderTotal}</span>
+              <span className="right">Total: ₽{order.orderTotal}</span>
             </section>
           </>
           :

@@ -1,3 +1,12 @@
+.CartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vmin;
+    margin-bottom: 2vmin;
+}
+
 .section-heading {
     background-color: rgb(46, 46, 46);
     border: 1px solid rgb(46, 46, 46);

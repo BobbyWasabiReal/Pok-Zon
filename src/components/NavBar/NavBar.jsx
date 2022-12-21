@@ -32,7 +32,7 @@ export default function NavBar({ user, setUser }) {
                     <Link to="/"
                     style={{fontSize: "3.5vmin"}}
                     ><img src={logo} alt="logo"  />PokéZon</Link>
-                    <Link to="/login">Log In</Link>
+                    <Link to="/login">Log In / Sign Up</Link>
                 </nav>
 
             }

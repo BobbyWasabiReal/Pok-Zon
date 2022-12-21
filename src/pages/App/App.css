@@ -50,7 +50,7 @@ body {
   background-color: #1f1f1f;
 }
 
-button {
+button, .btn {
   background-color: rgba(0, 0, 0, 0);
   color: white;
   border: 1px solid white;
@@ -60,7 +60,7 @@ button {
   transition: 200ms;
 }
 
-button:hover {
+button:hover, .btn:hover {
   background-color: white;
   color: black;
   border: 1px solid black;

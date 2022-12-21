@@ -4,7 +4,6 @@
   align-items: center;
   padding: 3vmin;
   font-size: 2vmin;
-  color: var(--text-light);
 }
 
 .Cart .section-heading {
@@ -33,6 +32,8 @@
   align-items: center;
   font-size: 1.5vw;
   color: var(--text-dark);
+  width: 20vmin;
+  margin-left: -8vmin;
 }
 
 .Cart .total span.right {
