@@ -1,0 +1,8 @@
+.BackpackPage {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3.5fr 3fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(0, 0, 0);
+    border-radius: 2vmin;
+  }

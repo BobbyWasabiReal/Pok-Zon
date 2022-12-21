@@ -9,9 +9,7 @@ module.exports = {
 };
 
 async function getAllForUser(req, res) {
-  const orders = await Order.find({ user: req.user._id, isPaid: true }).sort(
-    "-updatedAt"
-  );
+  const orders = await Order.find({ user: req.user._id, IsPaid: true }).sort("-updatedAt").populate("cartItems.item").exec();
   res.json(orders);
 }
 

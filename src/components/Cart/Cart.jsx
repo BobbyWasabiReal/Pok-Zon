@@ -4,22 +4,24 @@ import CartItem from "../CartItem/CartItem";
 export default function Cart({ order, handleChangeQuantity, handleCheckout }) {
   if (!order) return null;
 
-  const cartItems = order.cartItems.map(item => (
+  const cartItems = order.cartItems.map(item => 
     <CartItem
       cartItem={item}
-      isPaid={order.isPaid}
+      IsPaid={order.IsPaid}
       handleChangeQuantity={handleChangeQuantity}
       key={item._id}
     />
-  ));
+  );
+
   return (
-    <div className="Cart">
+    <div className="OrderDetail">
+        <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       <div className="line-item-container flex-ctr-ctr flex-col scroll-y">
         {cartItems.length ?
           <>
             {cartItems}
             <section className="total">
-              {order.isPaid ?
+              {order.IsPaid ?
                 <span className="right">TOTAL&nbsp;&nbsp;</span>
                 :
                 <button

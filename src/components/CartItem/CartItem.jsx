@@ -1,6 +1,6 @@
 import "./CartItem.css";
 
-export default function CartItem({ cartItem, isPaid, handleChangeQuantity }) {
+export default function CartItem({ cartItem, IsPaid, handleChangeQuantity }) {
   return (
     <div className="CartItem">
       <div className="flex-ctr-ctr">
@@ -16,8 +16,8 @@ export default function CartItem({ cartItem, isPaid, handleChangeQuantity }) {
         ₽{cartItem.item.price}
         </span>
       </div>
-      <div className="qty" style={{ justifyContent: isPaid && "center" }}>
-        {!isPaid && (
+      <div className="qty" style={{ justifyContent: IsPaid && "center" }}>
+        {!IsPaid && 
           <button
             className="btn-xs"
             onClick={() =>
@@ -26,9 +26,9 @@ export default function CartItem({ cartItem, isPaid, handleChangeQuantity }) {
           >
             −
           </button>
-        )}
+        }
         <span>{cartItem.quantity}</span>
-        {!isPaid && (
+        {!IsPaid && 
           <button
             className="btn-xs"
             onClick={() =>
@@ -37,7 +37,7 @@ export default function CartItem({ cartItem, isPaid, handleChangeQuantity }) {
           >
             +
           </button>
-        )}
+        }
       </div>
       <div className="ext-price">₽{cartItem.extPrice}</div>
     </div>

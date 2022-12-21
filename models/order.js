@@ -9,17 +9,18 @@ const cartItemSchema = new Schema({
   }
 );
 
-cartItemSchema.virtual("extPrice").get(function () {
+cartItemSchema.virtual("extPrice").get(function() {
   return this.quantity * this.item.price;
 });
 
 const OrderSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: "User" },
-    IsPaid: { type: Boolean, default: false },
+    user: { type: Schema.Types.ObjectId, ref: "User", required: true },
     cartItems: [cartItemSchema],
+    IsPaid: { type: Boolean, default: false },
   },
   {
+    timestamps: true,
     toJSON: { virtuals: true },
   }
 );
@@ -32,7 +33,7 @@ OrderSchema.virtual("orderQty").get(function () {
   return this.cartItems.reduce((total, item) => total + item.qty, 0);
 });
 
-OrderSchema.virtual('orderId').get(function() {
+OrderSchema.virtual("orderId").get(function() {
   return this.id.slice(-6).toUpperCase();
 });
 
