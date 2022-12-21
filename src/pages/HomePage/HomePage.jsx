@@ -17,7 +17,7 @@ export default function HomePage() {
         className="btn"
         style={{fontSize: "4vmin"}}
         >
-          Log In / Sign Up
+            Log In / Sign Up
         </Link>
       </div>
       <img src={logo} alt="logo" className="logo" />
