@@ -1,16 +1,17 @@
-.AuthPage {
+.HomePage {
   position: absolute;
-  top: 50%;
+  top: 47%;
+  left: 12vmin;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .logo {
   position: absolute;
-  top: 50%;
-  right: 10vmin;
+  top: 55%;
+  right: 5vmin;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 60vmin;
-  height: 60vmin;
+  width: 80vmin;
+  height: 80vmin;
 }
