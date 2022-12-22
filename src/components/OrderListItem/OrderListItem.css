@@ -6,10 +6,11 @@
     margin-bottom: 3vmin;
     padding: 2vmin;
     background-color: black;
-    border: .2vmin solid var(--tan-3);
+    border: .2vmin solid #383838;
     border-radius: 1vmin;
     font-size: 2vmin;
     cursor: pointer;
+    transition: 170ms;
   }
   
   .OrderListItem > div> div:first-child {
@@ -17,12 +18,12 @@
   }
   
   .OrderListItem.selected {
-    border-color: var(--yellow);
+    border-color: white;
     border-width: .2vmin;
     cursor: default;
   }
   
   .OrderListItem:not(.selected):hover {
-    border-color: var(--yellow);
+    border-color: white;
     border-width: .2vmin;
   }
