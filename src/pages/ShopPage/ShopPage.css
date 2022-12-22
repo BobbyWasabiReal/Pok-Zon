@@ -2,7 +2,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1.6fr 3.5fr 3fr;
-  grid-template-rows: 1fr 0.1fr;
+  grid-template-rows: 1fr 0.07fr;
   border-radius: 2vmin;
 }
 
@@ -16,7 +16,7 @@
 
 .TextBox{
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   font-size: 4vmin;
   position: fixed;
   bottom: 0;

@@ -1,5 +1,6 @@
 .BackpackPage {
   height: 100%;
+  margin-top: 4vmin;
   display: grid;
   grid-template-columns: 3.5fr 3fr;
   grid-template-rows: 1fr;
