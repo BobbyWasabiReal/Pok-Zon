@@ -29,7 +29,7 @@
   | <h3>Backpack Page</h3> | <img src="src/README Pics/Screen Shot 2022-12-21 at 5.33.08 PM.png" width="700" /> |
 
 
-  ## :rocket: Technologies Used
+  ## :computer: Technologies Used
 
   ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
   ![Express](https://img.shields.io/badge/-Express-05122A?style=flat&logo=express)
@@ -49,14 +49,14 @@
 
   ## :rocket: Getting Started
 
-<details>
+<details open>
   <summary> How to Make an Order?</summary>
     1. Browse to the shop page by using the navbar. <br>
     2. add items to your cart by clicking on the "Add" button. <br>
     3. Once you are ready to checkout, click on the "Checkout" button.
 </details> <br>
 
-<details>
+<details open>
   <summary> How to See Previous Orders </summary>
     1. Browse to the "Backpack" page by using the navbar. <br>
     2. Click on an order to see the details of your order.
