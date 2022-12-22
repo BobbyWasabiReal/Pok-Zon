@@ -47,32 +47,39 @@
   ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
   ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
-  ## :fire: Getting Started
+  ## :rocket: Getting Started
 
 <details>
-  <summary> How to Make an Order </summary>
+  <summary> How to Make an Order?</summary>
     1. Browse to the shop page by using the navbar. <br>
     2. add items to your cart by clicking on the "Add" button. <br>
     3. Once you are ready to checkout, click on the "Checkout" button.
 </details> <br>
 
 <details>
-  <summary> How to Interact With Others' Posts </summary>
-    1. Posts may be "liked" or "disliked" by clicking on the thumbs up or down button on their card.
-    2. To reveal the author of a post, hover over the `Who could it possibly be?` button.
-    3. To see more posts by the same user, click on the revealed username and profile picture.
-</details>
+  <summary> How to See Previous Orders </summary>
+    1. Browse to the "Backpack" page by using the navbar. <br>
+    2. Click on an order to see the details of your order.
+</details> <br>
 
 <details open>
   <summary> Trello Board </summary>
-  <a href="https://trello.com/b/x4ViComX/meet-your-classmates-project-4"
-    > https://trello.com/b/x4ViComX/meet-your-classmates-project-4 </a
+  <a href="https://trello.com/b/BbdeSWty/pok%C3%A9zon"
+    > PokéZon Trello Board </a
+  >
+</details><br>
+
+<details open>
+  <summary> Deployed Link </summary>
+  <a href="https://pokezon.herokuapp.com/"
+    > PokéZon Link (Heroku) </a
   >
 </details>
 
-<details open>
-  <summary> Deployed Link (Heroku) </summary>
-  <a href="https://meetyourclassmates.herokuapp.com/"
-    > https://meetyourclassmates.herokuapp.com/ </a
-  >
-</details>
+## :satellite: Upcoming Features
+
+- [ ] A toggle for the user to switch between light and dark mode.
+
+- [ ] Style the app appropriately for smaller devices.
+
+- [ ] Music and sound effects.
