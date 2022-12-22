@@ -13,7 +13,7 @@
 .Cart .line-item-container {
   margin-top: 3vmin;
   justify-content: flex-start;
-  height: calc(100vh - 18vmin);
+  height: calc(100vh - 2vmin);
   width: 100%;
 }
 
