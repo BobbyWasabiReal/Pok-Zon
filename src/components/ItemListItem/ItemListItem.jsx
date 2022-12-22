@@ -1,8 +1,13 @@
 import "./ItemListItem.css";
 
-export default function ItemListItem({ item, handleAddToOrder }) {
+export default function ItemListItem({ item, handleAddToOrder, setDescText}) {
+
+  function handleDescText(evt) {
+    setDescText(item.description);
+  }
+
   return (
-    <div className="ItemListItem">
+    <div className="ItemListItem" onClick={handleDescText}>
       <div className="image">
         <img
           src={item.image}

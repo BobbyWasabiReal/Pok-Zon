@@ -11,6 +11,7 @@ export default function ShopPage({ handleRefreshChange }) {
   const [items, setItems] = useState([]);
   const [activeCategory, setActiveCategory] = useState("");
   const [cart, setCart] = useState(null);
+  const [descText, setDescText] = useState("...");
   const categories = useRef([]);
     const navigate = useNavigate();
 
@@ -59,12 +60,14 @@ export default function ShopPage({ handleRefreshChange }) {
       <ItemList
         items={items.filter(item => item.category === activeCategory)}
         handleAddToOrder={handleAddToOrder}
+        setDescText={setDescText}
       />
       <Cart
         order={cart}
         handleChangeQuantity={handleChangeQuantity}
         handleCheckout={handleCheckout}
       />
+      <div className="TextBox">{descText}</div>
     </main>
   );
 }
